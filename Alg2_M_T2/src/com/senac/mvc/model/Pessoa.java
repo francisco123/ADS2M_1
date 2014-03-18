@@ -6,8 +6,17 @@ public class Pessoa {
 	private String telefone;
 	private String endereco;
 	private String telefoneTipo;
+	private String sobreNome;
 	
-		//Getters and Setters
+	
+	
+	//Getters and Setters
+	public String getSobreNome(){
+		return sobreNome;
+	}
+	public void setSobreNome(String sobreNome){
+		this.sobreNome= sobreNome;
+	}
 	public String getEndereco(){
 		return endereco;
 	}
