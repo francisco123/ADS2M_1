@@ -31,24 +31,45 @@ public class GameController {
 	}
 	public void realizaJogada() {
 		
-		if (view.getUserInput().equalsIgnoreCase("jogar")) {
+		
 			Carta comprada = baralho.drawCarta();
-			view.mostraCarta(comprada);
 			int score = game.matchCards(comprada);
-			jogador.addPontos(score);
-			game.setMesa(comprada);
-			
+			System.out.println("Deseja jogar ou passar? ");
+			if (view.getUserInput().equalsIgnoreCase("jogar")) {
+				view.mostraCarta(comprada);
+				jogador.addPontos(score);
+				game.setMesa(comprada);
+				if (view.getUserInput().equalsIgnoreCase("passar")){
+				jogador.subtractPontos(score);
+				view.mostraJogador(jogador);
+				}
 		}
 		
-			
+		
+	
 	}
+		public void realizaSegundaJogada(){
+				view.getUserInput().equalsIgnoreCase("jogar");
+				Carta comprada = baralho.drawCarta();
+				view.mostraCarta(comprada);
+				int score = game.matchCards(comprada);
+				jogador2.addPontos2(score);
+				game.setMesa(comprada);
+			}
 
+		
+	
 	public boolean isOver() {
 		return baralho.isEmpty();
 	}
 
 	public void showStatus() {
 		view.mostraJogador(jogador);
+		view.mostraCarta(game.getMesa());
+	}
+	
+	public void showStatus2() {
+		view.mostraJogador2(jogador2);
 		view.mostraCarta(game.getMesa());
 	}
 	

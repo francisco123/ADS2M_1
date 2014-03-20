@@ -31,4 +31,8 @@ public class MatchingGame {
 		
 		return score;
 	}
+	public int Passar(){
+		int score = 1;
+		return score;
+	}
 }

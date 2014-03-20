@@ -25,4 +25,8 @@ public class GameView {
 	public void mostraJogador(Jogador jogador) {
 		out.println("Jogador 1 "+"\nPontos: "+ jogador.getPontos());
 	}
+	public void mostraJogador2(Jogador jogador2) {
+		out.println("\n\nJogador 2 "+"\nPontos: "+ jogador2.getPontosJogador2());
+		
+	}
 }
