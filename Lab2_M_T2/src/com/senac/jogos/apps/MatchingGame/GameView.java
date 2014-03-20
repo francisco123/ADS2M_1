@@ -23,7 +23,6 @@ public class GameView {
 	}
 	
 	public void mostraJogador(Jogador jogador) {
-		out.println(String.format("Pontos: %d",
-				                  jogador.getPontos()));
+		out.println("Jogador 1 "+"\nPontos: "+ jogador.getPontos());
 	}
 }
